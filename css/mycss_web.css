@@ -90,6 +90,22 @@ a:hover {
   transform: scale(1.1);
 }
 
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  img {
+    display: none;
+  } 
+}
+
   
   
 
