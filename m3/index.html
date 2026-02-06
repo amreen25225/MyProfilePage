@@ -23,11 +23,15 @@ rel="stylesheet">
 </head>
 
 <body>
-<h1 style="text-align: center; color: white;">
-	My Profile Page
-</h1>
+<div class="container">
 
-<h1>Welcome to My Course Profile!</h1>
+<div class="row">
+<div class="col-12 text-center">
+    <h1 class="text-white">My Profile Page</h1>
+    <h2>Welcome to My Course Profile!</h2>
+  </div>
+</div>
+
 <p> This is my first HTML page! </p>
 <a href="https://www.google.com" target="_blank">
     Open Google in a new tab
@@ -47,33 +51,39 @@ rel="stylesheet">
     </ul>
 </div>
 
-<div id="profile">
-<h1>Profile Information:</h1>
-
+<div class="row">
+	<div class="col-md-4">
+		<div id="profile">
+			<h1>Profile Information:</h1>
  <p> 
     <span>Name:</span> Amreen Kaur <br>
     <span>Major: </span> Information Technology <br>
     <span>Minor:</span> Business Administration 
     </p>
-</div>
-
+			
 <a href="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
      alt="My profile picture"
-     class="profile-img">
+     class="img-fluid rounded">
 </a>
-<div id="education">
-    <h1>Education:</h1>
+		</div>
+	</div>
+
+<div class="col-md-8">
+	<div id="education">
+   		<h1>Education:</h1>
     <p>
         I am currently pursuing a Bachelor's degree in Information Technology with a minor in Business Administration at St. John's University, in Queens New York. I have taken some courses on Java, Network Security, Cybersecurity, and Management Systems.
     </p>
+		
     <ul>
         <li>B.S. in Information Technology (In progress)</li>
         <li>Minor in Business Administration (In progress)</li>
     </ul>
-
+	</div>
 </div>
-
+</div>
+	
 <div id="experience">
     <h1>Experience:</h1>
     <ul> 
@@ -202,6 +212,6 @@ rel="stylesheet">
         <input type="submit" value="Submit">
     </form>
 </div>
-
+</div>
 </body>
 </html>
