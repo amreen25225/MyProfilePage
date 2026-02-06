@@ -1,9 +1,15 @@
+<!--Milestone 3: Bootstrap Version-->
+
 <!DOCTYPE html>
 <html> 
 <head> 
 	
 	<title>My Course Profile</title>
 	
+<!--Bootstrap-->
+	
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+rel="stylesheet">
 <link rel="stylesheet" href="css/mycss_web.css" media="screen and (min-width: 901px)">
 <link rel="stylesheet" href="css/mycss_tablet.css" media="screen and (max-width: 900px)">
 <link rel="stylesheet" href="css/mycss_web.css" media="print">
@@ -17,62 +23,74 @@
 </head>
 
 <body>
-<div style="background-color:#eef6ff; padding:15px; text-align:center; border-bottom:2px solid #ccc;">
-  <strong>View the latest version of my profile (Milestone 3):</strong>
-  <a href="m3/" style="font-weight:bold; color:#007bff;">Click here</a>
-</div>
-	
-<h1 style="text-align: center; color: white;">
-	My Profile Page
-</h1>
+<div class="container">
 
-<h1>Welcome to My Course Profile!</h1>
+<div class="row">
+<div class="col-12 text-center">
+    <h1 class="text-white">My Profile Page</h1>
+    <h2>Welcome to My Course Profile!</h2>
+  </div>
+</div>
+
 <p> This is my first HTML page! </p>
-<a href="https://www.google.com" target="_blank">
+<a href="https://www.google.com" target="_blank" class="btn btn-outline-secondary mb-3">
     Open Google in a new tab
 </a>
 
-<div id="menu">
-    <h1>Menu:</h1>
-    <ul>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Programming Skills</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#favorites">Favorites</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" href="#">My Profile</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+      <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+      <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+      <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+      <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
+      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
     </ul>
-</div>
+  </div>
+</nav>
 
-<div id="profile">
-<h1>Profile Information:</h1>
-
+<div class="row">
+	<div class="col-md-4">
+		<div id="profile">
+			<h1>Profile Information:</h1>
  <p> 
     <span>Name:</span> Amreen Kaur <br>
     <span>Major: </span> Information Technology <br>
     <span>Minor:</span> Business Administration 
     </p>
-</div>
-
+			
 <a href="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
      alt="My profile picture"
-     class="profile-img">
+     class="img-fluid rounded">
 </a>
-<div id="education">
-    <h1>Education:</h1>
+		</div>
+	</div>
+
+<div class="col-md-8">
+	<div id="education">
+   		<h1>Education:</h1>
     <p>
         I am currently pursuing a Bachelor's degree in Information Technology with a minor in Business Administration at St. John's University, in Queens New York. I have taken some courses on Java, Network Security, Cybersecurity, and Management Systems.
     </p>
+		
     <ul>
         <li>B.S. in Information Technology (In progress)</li>
         <li>Minor in Business Administration (In progress)</li>
     </ul>
-
+	</div>
 </div>
-
+</div>
+	
 <div id="experience">
     <h1>Experience:</h1>
     <ul> 
@@ -82,11 +100,11 @@
     </ul>
 </div>
 
-<div id="skills">
+<div id="skills" class="mt-4">
     <h1>Programming Skills:</h1>
     <p>Below are the programming languages I have previously used and tried out, as well as my proficiency level.</p>
 
-    <table border="1">
+    <table class="table table-striped table-bordered table-hover">
         <tr>
             <th>Programming Language</th>
             <th>Proficiency Level</th>
@@ -186,25 +204,31 @@
 </div>
 
 <div id="contact">
-    <h1>Contact Me - </h1>
+	<h1>Contact Me - </h1>
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+  </div>
 
-    <form> 
-        <p>
-            Name: <input type="text" name="name">
-        </p>
-        <p>
-            Message: <input type="text" name="message">
-        </p>
-        <p>
-            Email: <input type="email" name="email">
-        </p> 
-        <input type="submit" value="Submit">
-    </form>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter your message"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+	
 </div>
-
+	
+<!--Bootstrap JS for Navbar Toggle-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	
 </body>
 </html>
-
-
-
-
